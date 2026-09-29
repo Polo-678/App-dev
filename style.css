@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: aliceblue;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  background-color: rgb(196, 16, 16);
+  padding: 15px;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.logo {
+  display: inline-block;
+  color: white;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.nav a {
+  color: white;
+  text-decoration: underline;
+  font-size: 20px;
+}
+
+.frass {
+  padding: 80px 20px;
+  background-image: url(frass.jpg);
+  width: 100%;
+  background-size: clamp(100%, 100vw, 200vw) clamp(90vw, 100%, 200vw);
+  flex-direction: column;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 90vh;
+}
+
+.ftext1c {
+  margin-bottom: 0;
+  font-size: clamp(50px, 5vw + 10px, 100px);
+  color: antiquewhite;
+  text-align: center;
+}
+
+.ftext1 {
+  margin-bottom: 0;
+  font-size: clamp(30px, 5vw + 10px, 100px);
+  color: antiquewhite;
+  text-align: center;
+}
+
+.ftext2 {
+  margin-top: 0;
+  font-size: clamp(3px, 1vw + 10px, 30px);
+  color: antiquewhite;
+  text-align: center;
+}
