@@ -9,10 +9,11 @@ body {
 }
 
 .header {
+  margin-left: 0;
   position: sticky;
   top: 0;
   background-color: rgb(196, 16, 16);
-  padding: 15px;
+  padding: 2px 20px;
   z-index: 100;
   display: flex;
   justify-content: space-between;
@@ -21,9 +22,18 @@ body {
   gap: 15px;
 }
 
-.logo {
+.logotext {
+  margin-left: 0;
+  margin-right: auto;
   display: inline-block;
   color: white;
+}
+.limage {
+  height: 100px;
+  width: auto;
+  margin-left: 0;
+  margin-right: 0;
+  font-size: clamp(30px, 5vw + 10px, 100px);
 }
 
 .nav {
@@ -71,4 +81,57 @@ body {
   font-size: clamp(3px, 1vw + 10px, 30px);
   color: antiquewhite;
   text-align: center;
+}
+
+.ftext3 {
+  font-size: clamp(3px, 1vw + 10px, 30px);
+  color: antiquewhite;
+  text-align: center;
+  background-color: rgb(122, 120, 0);
+  padding: 15px 15p;
+}
+
+.libcics {
+  padding: 80px 20px;
+  background-image:
+    linear-gradient(rgb(196, 16, 16, 0.5), rgb(196, 16, 16, 0.5)), url(lib.jpg);
+  background-size: clamp(100%, 100vw, 200vw) clamp(90vw, 100%, 200vw);
+  flex-direction: column;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: grid;
+  height: 90vh;
+}
+
+.au {
+  grid-column: 1;
+  grid-row: 1;
+  text-align: center;
+}
+.tau {
+  grid-column: 1;
+  grid-row: 2/3;
+}
+
+.ms {
+  grid-column: 2;
+  grid-row: 1;
+  text-align: right;
+}
+
+.tms {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.vs {
+  grid-column: 2;
+  grid-row: 3;
+  text-align: right;
+  margin-top: 15px;
+}
+
+.tvs {
+  grid-column: 2;
+  grid-row: 4;
 }
