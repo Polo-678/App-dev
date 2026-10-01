@@ -8,8 +8,8 @@ body {
   background-color: aliceblue;
 }
 
+/* ---------- header ---------- */
 .header {
-  margin-left: 0;
   position: sticky;
   top: 0;
   background-color: rgb(196, 16, 16);
@@ -23,139 +23,194 @@ body {
 }
 
 .logotext {
-  margin-left: 0;
   margin-right: auto;
-  display: inline-block;
   color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
-.limage {
-  height: 100px;
-  width: auto;
-  margin-left: 0;
-  margin-right: 0;
-  font-size: clamp(30px, 5vw + 10px, 100px);
+
+.logotext img {
+  height: 45px;
 }
 
 .nav {
   display: flex;
-  gap: 20px;
   align-items: center;
 }
+
 .nav a {
   color: white;
-  text-decoration: underline;
+  text-decoration: none;
   font-size: 20px;
+  padding: 0 12px;
+  border-right: 1px solid white;
 }
 
+.nav a:last-child {
+  border-right: none;
+}
+
+/* ---------- hero ---------- */
 .frass {
   padding: 80px 20px;
   background-image: url(frass.jpg);
-  width: 100%;
-  background-size: clamp(100%, 100vw, 200vw) clamp(90vw, 100%, 200vw);
-  flex-direction: column;
-  background-repeat: no-repeat;
+  background-size: cover;
   background-position: center;
+  height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 90vh;
-}
-
-.ftext1c {
-  margin-bottom: 0;
-  font-size: clamp(50px, 5vw + 10px, 100px);
-  color: antiquewhite;
-  text-align: center;
 }
 
 .ftext1 {
-  margin-bottom: 0;
   font-size: clamp(30px, 5vw + 10px, 100px);
   color: antiquewhite;
   text-align: center;
 }
 
-.ftext2 {
-  margin-top: 0;
-  font-size: clamp(3px, 1vw + 10px, 30px);
-  color: antiquewhite;
-  text-align: center;
-}
-
-.ftext3 {
-  font-size: clamp(3px, 1vw + 10px, 30px);
-  color: antiquewhite;
-  text-align: center;
-  background-color: rgb(122, 120, 0);
-  padding: 15px 15p;
-}
-
-.libcics {
-  padding: 80px 20px;
+/* ---------- programs ---------- */
+.programs {
   background-image:
-    linear-gradient(rgb(196, 16, 16, 0.5), rgb(196, 16, 16, 0.5)), url(lib.jpg);
-  background-size: clamp(100%, 100vw, 200vw) clamp(90vw, 100%, 200vw);
-  flex-direction: column;
-  background-repeat: no-repeat;
+    linear-gradient(rgba(196, 16, 16, 0.75), rgba(196, 16, 16, 0.75)),
+    url(lib.jpg);
+  background-size: cover;
   background-position: center;
+  border-radius: 30px;
+  padding: 40px 20px;
   display: grid;
-  height: 90vh;
+  gap: 40px;
+  color: white;
 }
 
-.au {
-  grid-column: 1;
-  grid-row: 1;
-  text-align: center;
-  color: #fff;
-  font-size: 2.2rem;
-  font-weight: bolder;
+.programs article {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
 }
 
-.ms {
-  grid-column: 2;
-  grid-row: 1;
-  text-align: center;
-  color: #fff;
-  font-size: 2.2rem;
-  font-weight: bolder;
-}
-
-.vs {
-  grid-column: 2;
-  grid-row: 3;
-  text-align: center;
-  color: #fff;
-  font-size: 2.2rem;
-  font-weight: bolder;
-  margin-top: 20px;
-}
-
-.tau,
-.tsm,
-.tvs {
+.tag,
+.card {
   background: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(8px);
-  padding: 28px 32 px;
 }
 
-.tau {
-  grid-column: 1;
-  grid-row: 2;
-  max-width: 520px;
-  justify-self: center;
+.tag {
+  display: inline-block;
+  margin: 0 0 15px;
+  padding: 8px 25px;
+  border-radius: 30px;
 }
 
-.tms {
-  grid-column: 2;
-  grid-row: 2;
-  max-width: 520px;
-  justify-self: end;
+.card {
+  padding: 28px 32px;
+  border-radius: 20px;
 }
 
-.tvs {
-  grid-column: 2;
-  grid-row: 4;
-  max-width: 520px;
-  justify-self: end;
+.card h4 {
+  margin: 0 0 8px;
+  font-size: 1.3rem;
+}
+
+.card p {
+  margin: 0;
+}
+
+/* ---------- comparison table ---------- */
+.comparison {
+  background-color: rgb(160, 20, 20);
+  border-radius: 40px;
+  margin: 40px 20px;
+  padding: 30px 20px;
+  color: white;
+  text-align: center;
+}
+
+.comparison table {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  color: black;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.comparison th,
+.comparison td {
+  padding: 15px;
+  border: 1px solid #ccc;
+}
+
+/* ---------- department heads ---------- */
+.heads {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.heads h2,
+.recognitions h2 {
+  grid-column: 1 / -1;
+  font-size: 2.5rem;
+  color: #3b1010;
+  text-align: center;
+}
+
+.heads figure {
+  margin: 0;
+}
+
+.heads img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border: 8px solid rgb(160, 20, 20);
+  border-radius: 30px;
+}
+
+.heads figcaption {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* ---------- recognitions ---------- */
+.recognitions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px 20px 60px;
+}
+
+.recognitions article {
+  background-color: #e5e5e5;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.recognitions img {
+  height: 70px;
+}
+
+/* ---------- footer ---------- */
+.footer {
+  background-color: rgb(160, 20, 20);
+  color: white;
+  padding: 30px 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer img {
+  height: 50px;
+}
+
+.footer address {
+  font-style: normal;
 }
