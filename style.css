@@ -107,31 +107,55 @@ body {
   grid-column: 1;
   grid-row: 1;
   text-align: center;
-}
-.tau {
-  grid-column: 1;
-  grid-row: 2/3;
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: bolder;
 }
 
 .ms {
   grid-column: 2;
   grid-row: 1;
-  text-align: right;
-}
-
-.tms {
-  grid-column: 2;
-  grid-row: 2;
+  text-align: center;
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: bolder;
 }
 
 .vs {
   grid-column: 2;
   grid-row: 3;
-  text-align: right;
-  margin-top: 15px;
+  text-align: center;
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: bolder;
+  margin-top: 20px;
+}
+
+.tau,
+.tsm,
+.tvs {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+  padding: 28px 32 px;
+}
+
+.tau {
+  grid-column: 1;
+  grid-row: 2;
+  max-width: 520px;
+  justify-self: center;
+}
+
+.tms {
+  grid-column: 2;
+  grid-row: 2;
+  max-width: 520px;
+  justify-self: end;
 }
 
 .tvs {
   grid-column: 2;
   grid-row: 4;
+  max-width: 520px;
+  justify-self: end;
 }
