@@ -95,6 +95,7 @@ body {
   border-radius: 53px;
 }
 
+/*--HINDI TO AI NAKAKA LITO LANG*/
 .homepage {
   background-image:
     linear-gradient(rgba(196, 16, 16, 0.75), rgba(196, 16, 16, 0.75)),
@@ -107,16 +108,6 @@ body {
   justify-content: center;
   grid-template-columns: repeat(2, minmax(0, 520px));
   column-gap: 120px;
-  color: white;
-}
-
-.courses {
-  display: grid;
-  justify-items: center;
-  justify-content: center;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
-  padding: 20px;
   color: white;
 }
 
@@ -203,6 +194,15 @@ body {
 .vs {
   margin-top: 30px;
 }
+.courses {
+  display: grid;
+  justify-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  padding: 20px;
+  color: white;
+}
 
 .cs,
 .it,
@@ -264,6 +264,61 @@ body {
   backdrop-filter: blur(8px);
   display: flex;
 }
+
+.address {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 650px));
+  justify-content: center;
+  align-items: stretch;
+  gap: 50px;
+  padding: 60px 20px;
+}
+
+.ad {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 560px;
+  background: rgb(184, 138, 138);
+  color: #000;
+  padding: 50px;
+  border-radius: 24px;
+  font-size: 2.4rem;
+  gap: 44px;
+  font-weight: 500;
+  text-align: left;
+}
+
+.ad p {
+  margin: 0;
+  line-height: 1.45;
+}
+
+.map {
+  margin: 0;
+  display: block;
+  min-height: 560px;
+  width: 100%;
+  background: rgb(184, 138, 138);
+  padding: 22px;
+  border-radius: 24px;
+}
+
+.map iframe {
+  display: block;
+  width: 100%;
+  height: 516px;
+  border: 0;
+  border-radius: 30px;
+}
+
+.ad,
+.map {
+  min-width: 0;
+}
+
+/*--HINDI TO AI NAKAKA LITO LANG*/
 
 .programs,
 .orgs {
@@ -400,21 +455,63 @@ body {
 .footer {
   background-color: rgb(160, 20, 20);
   color: white;
-  padding: 30px 20px;
+  padding: 40px 20px 15px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 450px));
+  justify-content: center;
+  align-items: start;
+  column-gap: 100px;
+  row-gap: 25px;
+}
+
+.footer-left,
+.footer-right {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-logo {
+  width: 260px;
+  height: auto;
+}
+
+.footer-item {
+  display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.footer img {
-  height: 50px;
-  width: auto;
-}
-
-.footer address {
+  gap: 15px;
   font-style: normal;
+}
+
+.footer-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.footer p {
+  margin: 0;
+  font-weight: bold;
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+.footer a {
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-decoration: underline;
+}
+
+.footer-copy {
+  grid-column: 1 / -1;
+  justify-self: end;
+  font-size: 0.7rem;
+  font-weight: bold;
 }
 
 .orgs {
@@ -583,6 +680,22 @@ body {
     grid-template-columns: 1fr;
   }
 
+  .footer {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    row-gap: 30px;
+  }
+
+  .footer-left,
+  .footer-right {
+    align-items: flex-start;
+  }
+
+  .footer-copy {
+    justify-self: center;
+    text-align: center;
+  }
+
   .cs,
   .it,
   .is,
@@ -710,6 +823,21 @@ body {
     max-width: 420px;
     margin: 0 auto;
   }
+
+  .contact {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .contact {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .address {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -821,7 +949,66 @@ body {
   }
 
   .footer {
-    flex-direction: column;
-    text-align: center;
+    padding: 30px 15px 15px;
+    text-align: left;
+  }
+
+  .footer-logo {
+    width: 200px;
+  }
+
+  .footer p,
+  .footer a {
+    font-size: 1rem;
+  }
+  .contact {
+    padding: 25px 15px;
+  }
+
+  .ad {
+    padding: 20px;
+    font-size: 1.1rem;
+  }
+
+  .map {
+    padding: 12px;
+  }
+
+  .map img {
+    border-radius: 20px;
+  }
+  .contact {
+    padding: 25px 15px;
+  }
+
+  .ad {
+    padding: 20px;
+    font-size: 1.1rem;
+  }
+
+  .map {
+    padding: 12px;
+  }
+
+  .map img {
+    border-radius: 20px;
+  }
+
+  .address {
+    padding: 25px 15px;
+  }
+
+  .ad {
+    padding: 20px;
+    font-size: 1.1rem;
+  }
+
+  .map {
+    padding: 12px;
+  }
+
+  .map iframe {
+    height: 300px;
+    border-radius: 20px;
   }
 }
