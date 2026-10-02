@@ -2,13 +2,16 @@
   box-sizing: border-box;
 }
 
+img {
+  max-width: 100%;
+}
+
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   background-color: aliceblue;
 }
 
-/* ---------- header ---------- */
 .header {
   position: sticky;
   top: 0;
@@ -32,11 +35,14 @@ body {
 
 .logotext img {
   height: 45px;
+  width: auto;
 }
 
 .nav {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  row-gap: 6px;
 }
 
 .nav a {
@@ -51,13 +57,12 @@ body {
   border-right: none;
 }
 
-/* ---------- hero ---------- */
 .frass {
   padding: 80px 20px;
   background-image: url(frass.jpg);
   background-size: cover;
   background-position: center;
-  height: 45vh;
+  min-height: 45vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -81,17 +86,186 @@ body {
 .ftext2 {
   margin: 0;
   font-size: clamp(14px, 1vw + 8px, 20px);
-  color: antiquewhite;
+  color: rgb(63, 36, 0);
   text-align: center;
   text-transform: capitalize;
+  display: inline-block;
+  background-color: #ccc;
+  padding: 10px 10px;
+  border-radius: 53px;
 }
 
-/* ---------- programs ---------- */
+.homepage {
+  background-image:
+    linear-gradient(rgba(196, 16, 16, 0.75), rgba(196, 16, 16, 0.75)),
+    url(lib.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 30px;
+  padding: 40px 20px;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(2, minmax(0, 520px));
+  column-gap: 120px;
+  color: white;
+}
+
+.courses {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(2, minmax(0, 520px));
+  column-gap: 120px;
+  color: white;
+}
+
+.au {
+  grid-column: 1;
+  grid-row: 1;
+  text-align: center;
+  color: beige;
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.ms {
+  grid-column: 2;
+  grid-row: 1;
+  text-align: center;
+  color: beige;
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.vs {
+  grid-column: 2;
+  grid-row: 3;
+  text-align: center;
+  color: beige;
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.tau {
+  grid-column: 1;
+  grid-row: 2;
+  max-width: 520px;
+  justify-self: center;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+}
+
+.tms {
+  grid-column: 2;
+  grid-row: 2;
+  max-width: 520px;
+  justify-self: end;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+}
+.tvs {
+  grid-column: 2;
+  grid-row: 4;
+  max-width: 520px;
+  justify-self: end;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+}
+
+.tau,
+.tms,
+.tvs {
+  max-width: none;
+  justify-self: stretch;
+  margin-top: 10px;
+  display: inline-block;
+  padding: 20px 20px;
+  border-radius: 50px;
+}
+
+.au,
+.ms,
+.vs {
+  margin: 0;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 25px;
+  width: fit-content;
+  justify-self: center;
+}
+
+.vs {
+  margin-top: 30px;
+}
+
+.cs,
+.it,
+.is {
+  margin: 10px 0 0 0;
+  background: rgba(196, 16, 16);
+  padding: 10px 30px;
+  border-radius: 25px;
+  width: fit-content;
+  justify-self: center;
+
+  text-align: center;
+  color: beige;
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+.cs {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.it {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.is {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.tcs {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.tit {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.tis {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.tcs,
+.tit,
+.tis {
+  max-width: 520px;
+  justify-self: center;
+  margin-top: 10px;
+  padding: 20px;
+  border-radius: 50px;
+  color: #333;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+}
+
 .programs,
 .orgs {
   background-image:
     linear-gradient(rgba(196, 16, 16, 0.75), rgba(196, 16, 16, 0.75)),
-    url(lib.jpg);
+    url(cl.jpg);
   background-size: cover;
   background-position: center;
   border-radius: 30px;
@@ -134,7 +308,6 @@ body {
   margin: 0;
 }
 
-/* ---------- comparison table ---------- */
 .comparison {
   background-color: rgb(160, 20, 20);
   border-radius: 40px;
@@ -142,6 +315,7 @@ body {
   padding: 30px 20px;
   color: white;
   text-align: center;
+  overflow-x: auto;
 }
 
 .comparison table {
@@ -160,19 +334,24 @@ body {
   border: 1px solid #ccc;
 }
 
-/* ---------- department heads ---------- */
-.heads {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+.heads,
+.recognitions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px 40px;
   padding: 40px 20px;
-  text-align: center;
+  justify-items: center;
 }
 
 .heads h2,
 .recognitions h2 {
-  grid-column: 1 / -1;
-  font-size: 2.5rem;
+  flex: 0 0 100%;
+  width: 100%;
+  margin: 0 0 10px;
+  font-size: clamp(1.75rem, 4vw + 0.5rem, 2.5rem);
+  align-items: flex-start;
   color: #3b1010;
   text-align: center;
 }
@@ -187,6 +366,7 @@ body {
   object-fit: cover;
   border: 8px solid rgb(160, 20, 20);
   border-radius: 30px;
+  justify-items: center;
 }
 
 .heads figcaption {
@@ -194,7 +374,6 @@ body {
   margin-top: 10px;
 }
 
-/* ---------- recognitions ---------- */
 .recognitions {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -211,9 +390,9 @@ body {
 
 .recognitions img {
   height: 70px;
+  width: auto;
 }
 
-/* ---------- footer ---------- */
 .footer {
   background-color: rgb(160, 20, 20);
   color: white;
@@ -227,13 +406,13 @@ body {
 
 .footer img {
   height: 50px;
+  width: auto;
 }
 
 .footer address {
   font-style: normal;
 }
 
-/* ---------- community: organizations ---------- */
 .orgs {
   grid-template-columns: repeat(2, 1fr);
   gap: 40px 25px;
@@ -255,6 +434,7 @@ body {
 .orgs img {
   width: 50px;
   height: 50px;
+  flex-shrink: 0;
   border-radius: 8px;
   object-fit: cover;
 }
@@ -264,7 +444,6 @@ body {
   text-align: justify;
 }
 
-/* pax romana sits alone in the middle */
 .orgs article:last-child {
   grid-column: 1 / -1;
   justify-self: center;
@@ -272,7 +451,6 @@ body {
   max-width: 420px;
 }
 
-/* ---------- community: administrators ---------- */
 .admins {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -281,6 +459,7 @@ body {
   margin: 0 auto;
   padding: 40px 20px;
   text-align: center;
+  justify-items: center;
 }
 
 .admins h2,
@@ -289,7 +468,7 @@ body {
   grid-column: 1 / -1;
   margin: 0;
   font-family: Georgia, serif;
-  font-size: 2.5rem;
+  font-size: clamp(1.75rem, 4vw + 0.5rem, 2.5rem);
   text-align: center;
 }
 
@@ -305,6 +484,7 @@ body {
 .admins img {
   width: 190px;
   height: 190px;
+  max-width: 100%;
   object-fit: cover;
   border: 18px solid rgb(160, 20, 20);
   border-radius: 40px;
@@ -314,7 +494,6 @@ body {
   margin-top: 10px;
 }
 
-/* ---------- community: updates ---------- */
 .updates {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -365,7 +544,6 @@ body {
   text-align: justify;
 }
 
-/* ---------- community: patron saint ---------- */
 .patron {
   grid-column: 1 / -1;
   display: grid;
@@ -391,4 +569,198 @@ body {
 .patron p {
   margin: 0;
   text-align: justify;
+}
+
+@media (max-width: 900px) {
+  .homepage {
+    grid-template-columns: 1fr;
+  }
+
+  .au,
+  .tau {
+    grid-column: 1;
+  }
+
+  .ms,
+  .tms {
+    grid-column: 1;
+  }
+
+  .vs,
+  .tvs {
+    grid-column: 1;
+  }
+
+  .au {
+    grid-row: 1;
+  }
+  .tau {
+    grid-row: 2;
+  }
+  .ms {
+    grid-row: 3;
+  }
+  .tms {
+    grid-row: 4;
+  }
+  .vs {
+    grid-row: 5;
+  }
+  .tvs {
+    grid-row: 6;
+  }
+
+  .tau,
+  .tms,
+  .tvs {
+    max-width: none;
+    justify-self: stretch;
+  }
+
+  .header {
+    justify-content: center;
+    padding: 8px 15px;
+  }
+
+  .logotext {
+    margin-right: 0;
+    justify-content: center;
+  }
+
+  .nav {
+    justify-content: center;
+  }
+
+  .nav a {
+    font-size: 18px;
+    padding: 0 10px;
+  }
+
+  .frass {
+    padding: 60px 20px;
+  }
+
+  .comparison {
+    margin: 30px 15px;
+    border-radius: 30px;
+  }
+
+  .orgs {
+    grid-template-columns: 1fr;
+  }
+
+  .orgs article:last-child {
+    max-width: none;
+  }
+
+  .patron {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .patron img {
+    grid-row: auto;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .nav {
+    width: 100%;
+    gap: 6px 4px;
+  }
+
+  .nav a {
+    font-size: 16px;
+    padding: 6px 10px;
+    border-right: none;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  .frass {
+    padding: 40px 15px;
+    min-height: 40vh;
+  }
+
+  .homepage,
+  .programs,
+  .orgs {
+    border-radius: 20px;
+    padding: 30px 15px;
+    gap: 30px;
+  }
+
+  .card,
+  .tau,
+  .tms,
+  .tvs {
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  .tag,
+  .au,
+  .ms,
+  .vs {
+    padding: 8px 18px;
+  }
+
+  .comparison {
+    margin: 25px 10px;
+    padding: 20px 10px;
+    border-radius: 24px;
+  }
+
+  .comparison th,
+  .comparison td {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .heads {
+    padding: 30px 15px;
+  }
+
+  .recognitions {
+    padding: 20px 15px 40px;
+  }
+
+  .admins {
+    grid-template-columns: 1fr;
+    padding: 30px 15px;
+  }
+
+  .admins img {
+    width: 170px;
+    height: 170px;
+    border-width: 12px;
+  }
+
+  .updates {
+    grid-template-columns: 1fr;
+    padding: 30px 15px;
+    border-radius: 30px 30px 0 0;
+  }
+
+  .patron {
+    border-radius: 20px;
+  }
+
+  .orgs .card,
+  .updates article p,
+  .patron p {
+    text-align: left;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
 }
