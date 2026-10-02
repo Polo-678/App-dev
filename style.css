@@ -112,9 +112,11 @@ body {
 
 .courses {
   display: grid;
+  justify-items: center;
   justify-content: center;
-  grid-template-columns: repeat(2, minmax(0, 520px));
-  column-gap: 120px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  padding: 20px;
   color: white;
 }
 
@@ -211,11 +213,12 @@ body {
   border-radius: 25px;
   width: fit-content;
   justify-self: center;
-
+  justify-content: center;
   text-align: center;
   color: beige;
   font-size: 2.2rem;
   font-weight: bold;
+  display: flex;
 }
 
 .cs {
@@ -259,6 +262,7 @@ body {
   color: #333;
   background: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(8px);
+  display: flex;
 }
 
 .programs,
@@ -575,6 +579,49 @@ body {
   .homepage {
     grid-template-columns: 1fr;
   }
+  .courses {
+    grid-template-columns: 1fr;
+  }
+
+  .cs,
+  .it,
+  .is,
+  .tcs,
+  .tit,
+  .tis {
+    grid-column: 1;
+  }
+
+  .cs {
+    grid-row: 1;
+  }
+
+  .tcs {
+    grid-row: 2;
+  }
+
+  .it {
+    grid-row: 3;
+  }
+
+  .tit {
+    grid-row: 4;
+  }
+
+  .is {
+    grid-row: 5;
+  }
+
+  .tis {
+    grid-row: 6;
+  }
+
+  .tcs,
+  .tit,
+  .tis {
+    max-width: none;
+    justify-self: stretch;
+  }
 
   .au,
   .tau {
@@ -757,6 +804,20 @@ body {
   .updates article p,
   .patron p {
     text-align: left;
+  }
+
+  .cs,
+  .it,
+  .is {
+    font-size: 1.6rem;
+    padding: 10px 20px;
+  }
+
+  .tcs,
+  .tit,
+  .tis {
+    padding: 20px;
+    border-radius: 16px;
   }
 
   .footer {
