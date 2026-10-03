@@ -19,7 +19,6 @@ body {
   padding: 2px 20px;
   z-index: 100;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   gap: 15px;
@@ -95,6 +94,7 @@ body {
   border-radius: 53px;
 }
 
+/*--HINDI TO AI NAKAKA LITO LANG*/
 .homepage {
   background-image:
     linear-gradient(rgba(196, 16, 16, 0.75), rgba(196, 16, 16, 0.75)),
@@ -107,16 +107,6 @@ body {
   justify-content: center;
   grid-template-columns: repeat(2, minmax(0, 520px));
   column-gap: 120px;
-  color: white;
-}
-
-.courses {
-  display: grid;
-  justify-items: center;
-  justify-content: center;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
-  padding: 20px;
   color: white;
 }
 
@@ -153,55 +143,49 @@ body {
 .tau {
   grid-column: 1;
   grid-row: 2;
-  max-width: 520px;
-  justify-self: center;
-  background: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(8px);
 }
 
 .tms {
   grid-column: 2;
   grid-row: 2;
-  max-width: 520px;
-  justify-self: end;
-  background: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(8px);
 }
+
 .tvs {
   grid-column: 2;
   grid-row: 4;
-  max-width: 520px;
-  justify-self: end;
-  background: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(8px);
 }
 
 .tau,
 .tms,
 .tvs {
-  max-width: none;
-  justify-self: stretch;
   margin-top: 10px;
-  display: inline-block;
-  padding: 20px 20px;
+  padding: 20px;
   border-radius: 50px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
 }
 
 .au,
 .ms,
 .vs {
   margin: 0;
-  background: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(8px);
-  display: inline-block;
   padding: 10px 30px;
   border-radius: 25px;
-  width: fit-content;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
   justify-self: center;
 }
 
 .vs {
   margin-top: 30px;
+}
+
+.courses {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  padding: 20px;
 }
 
 .cs,
@@ -211,7 +195,6 @@ body {
   background: rgba(196, 16, 16);
   padding: 10px 30px;
   border-radius: 25px;
-  width: fit-content;
   justify-self: center;
   justify-content: center;
   text-align: center;
@@ -264,6 +247,54 @@ body {
   backdrop-filter: blur(8px);
   display: flex;
 }
+
+.address {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 650px));
+  justify-content: center;
+  gap: 50px;
+  padding: 60px 20px;
+}
+
+.ad {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 560px;
+  background: rgb(184, 138, 138);
+  color: #000;
+  padding: 50px;
+  border-radius: 24px;
+  font-size: 2.4rem;
+  gap: 44px;
+  font-weight: 500;
+}
+
+.map {
+  margin: 0;
+  display: block;
+  min-height: 560px;
+  width: 100%;
+  background: rgb(184, 138, 138);
+  padding: 22px;
+  border-radius: 24px;
+}
+
+.map iframe {
+  display: block;
+  width: 100%;
+  height: 516px;
+  border: 0;
+  border-radius: 30px;
+}
+
+.ad,
+.map {
+  min-width: 0;
+}
+
+/*--HINDI TO AI NAKAKA LITO LANG*/
 
 .programs,
 .orgs {
@@ -319,17 +350,21 @@ body {
   padding: 30px 20px;
   color: white;
   text-align: center;
-  overflow-x: auto;
 }
 
 .comparison table {
   width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
+  min-width: 600px;
   background: white;
   color: black;
   border-collapse: collapse;
   text-align: left;
+}
+
+.table-wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  overflow-x: auto;
 }
 
 .comparison th,
@@ -338,30 +373,32 @@ body {
   border: 1px solid #ccc;
 }
 
-.heads,
-.recognitions {
+.heads {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
   gap: 20px 40px;
   padding: 40px 20px;
-  justify-items: center;
 }
 
 .heads h2,
 .recognitions h2 {
-  flex: 0 0 100%;
-  width: 100%;
   margin: 0 0 10px;
   font-size: clamp(1.75rem, 4vw + 0.5rem, 2.5rem);
-  align-items: flex-start;
   color: #3b1010;
   text-align: center;
 }
 
+.heads h2 {
+  flex: 0 0 100%;
+}
+
 .heads figure {
   margin: 0;
+  width: 340px;
+  max-width: 100%;
+  text-align: center;
 }
 
 .heads img {
@@ -370,7 +407,6 @@ body {
   object-fit: cover;
   border: 8px solid rgb(160, 20, 20);
   border-radius: 30px;
-  justify-items: center;
 }
 
 .heads figcaption {
@@ -380,9 +416,14 @@ body {
 
 .recognitions {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 450px));
+  justify-content: center;
   gap: 20px;
   padding: 20px 20px 60px;
+}
+
+.recognitions h2 {
+  grid-column: 1 / -1;
 }
 
 .recognitions article {
@@ -394,27 +435,68 @@ body {
 
 .recognitions img {
   height: 70px;
-  width: auto;
 }
 
 .footer {
   background-color: rgb(160, 20, 20);
   color: white;
-  padding: 30px 20px;
+  padding: 40px 20px 15px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 450px));
+  justify-content: center;
+  align-items: start;
+  column-gap: 100px;
+  row-gap: 25px;
+}
+
+.footer-left,
+.footer-right {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-logo {
+  width: 260px;
+  height: auto;
+}
+
+.footer-item {
+  display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.footer img {
-  height: 50px;
-  width: auto;
-}
-
-.footer address {
+  gap: 15px;
   font-style: normal;
+}
+
+.footer-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.footer p {
+  margin: 0;
+  font-weight: bold;
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+.footer a {
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-decoration: underline;
+}
+
+.footer-copy {
+  grid-column: 1 / -1;
+  justify-self: end;
+  font-size: 0.7rem;
+  font-weight: bold;
 }
 
 .orgs {
@@ -488,7 +570,6 @@ body {
 .admins img {
   width: 190px;
   height: 190px;
-  max-width: 100%;
   object-fit: cover;
   border: 18px solid rgb(160, 20, 20);
   border-radius: 40px;
@@ -560,10 +641,6 @@ body {
   color: white;
 }
 
-.patron h2 {
-  color: white;
-}
-
 .patron img {
   grid-row: span 2;
   width: 100%;
@@ -583,6 +660,22 @@ body {
     grid-template-columns: 1fr;
   }
 
+  .footer {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    row-gap: 30px;
+  }
+
+  .footer-left,
+  .footer-right {
+    align-items: flex-start;
+  }
+
+  .footer-copy {
+    justify-self: center;
+    text-align: center;
+  }
+
   .cs,
   .it,
   .is,
@@ -590,14 +683,6 @@ body {
   .tit,
   .tis {
     grid-column: 1;
-  }
-
-  .cs {
-    grid-row: 1;
-  }
-
-  .tcs {
-    grid-row: 2;
   }
 
   .it {
@@ -623,45 +708,27 @@ body {
     justify-self: stretch;
   }
 
-  .au,
-  .tau {
-    grid-column: 1;
-  }
-
   .ms,
-  .tms {
-    grid-column: 1;
-  }
-
+  .tms,
   .vs,
   .tvs {
     grid-column: 1;
   }
 
-  .au {
-    grid-row: 1;
-  }
-  .tau {
-    grid-row: 2;
-  }
   .ms {
     grid-row: 3;
   }
+
   .tms {
     grid-row: 4;
   }
+
   .vs {
     grid-row: 5;
   }
+
   .tvs {
     grid-row: 6;
-  }
-
-  .tau,
-  .tms,
-  .tvs {
-    max-width: none;
-    justify-self: stretch;
   }
 
   .header {
@@ -709,6 +776,14 @@ body {
     grid-row: auto;
     max-width: 420px;
     margin: 0 auto;
+  }
+
+  .address {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .recognitions {
+    grid-template-columns: minmax(0, 450px);
   }
 }
 
@@ -816,12 +891,194 @@ body {
   .tcs,
   .tit,
   .tis {
-    padding: 20px;
     border-radius: 16px;
   }
 
   .footer {
-    flex-direction: column;
-    text-align: center;
+    padding: 30px 15px 15px;
+    text-align: left;
+  }
+
+  .footer-logo {
+    width: 200px;
+  }
+
+  .footer p,
+  .footer a {
+    font-size: 1rem;
+  }
+  .address {
+    padding: 25px 15px;
+  }
+
+  .ad {
+    padding: 20px;
+    font-size: 1.1rem;
+  }
+
+  .map {
+    padding: 12px;
+    min-height: 0;
+  }
+
+  .map iframe {
+    height: 300px;
+    border-radius: 20px;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 14px rgba(255, 255, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+.frass > * {
+  animation: fadeUp 0.8s ease-out backwards;
+}
+
+.frass > *:nth-child(2) {
+  animation-delay: 0.25s;
+}
+
+a.ftext2 {
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease;
+  animation: pulse 2.4s ease-out infinite;
+}
+
+a.ftext2:hover {
+  transform: scale(1.08);
+  background-color: #fff;
+  animation: none;
+}
+
+.nav a {
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.logotext img {
+  transition: transform 0.3s ease;
+}
+
+.logotext:hover img {
+  transform: rotate(-8deg) scale(1.1);
+}
+
+.tau,
+.tms,
+.tvs,
+.tcs,
+.tit,
+.tis,
+.programs article,
+.orgs article,
+.recognitions article,
+.updates article {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.tau:hover,
+.tms:hover,
+.tvs:hover,
+.tcs:hover,
+.tit:hover,
+.tis:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.25);
+}
+
+.programs article:hover,
+.orgs article:hover,
+.recognitions article:hover,
+.updates article:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+.recognitions article:hover {
+  background-color: #efefef;
+}
+
+.updates article img {
+  transition:
+    transform 0.4s ease,
+    opacity 0.4s ease;
+}
+
+.updates article:hover img {
+  transform: scale(1.08);
+  opacity: 1;
+}
+
+.heads img,
+.admins img {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.heads figure:hover img,
+.admins figure:hover img {
+  transform: translateY(-6px) scale(1.04);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+.comparison td {
+  transition: background-color 0.2s ease;
+}
+
+.comparison tr:hover td {
+  background-color: #fbe9e9;
+}
+
+.footer a {
+  transition: color 0.25s ease;
+}
+
+.footer a:hover {
+  color: #ffd1d1;
+}
+
+.footer-icon {
+  transition: transform 0.25s ease;
+}
+
+.footer-right .footer-item:hover .footer-icon {
+  transform: scale(1.15) rotate(-6deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
